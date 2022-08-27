@@ -1,0 +1,25 @@
+{
+  "name": "node-product-rtk",
+  "version": "1.0.0",
+  "description": "Node Product RTK",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxxxxxRIFATxxxxxx/node-product-rtk.git"
+  },
+  "author": "Md. Rifat Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xxxxxxRIFATxxxxxx/node-product-rtk/issues"
+  },
+  "homepage": "https://github.com/xxxxxxRIFATxxxxxx/node-product-rtk#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
+    "node-fetch": "^2.6.7",
+    "redux-logger": "^3.0.6"
+  }
+}
