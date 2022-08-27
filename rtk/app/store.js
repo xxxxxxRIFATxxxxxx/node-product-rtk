@@ -12,7 +12,7 @@ const store = configureStore({
         relatedPosts: relatedPostsReducer
     },
     middleware: (getDefaultMiddlewares) => {
-        return getDefaultMiddlewares().concat();
+        return getDefaultMiddlewares().concat(logger);
     }
 });
 

@@ -9,12 +9,20 @@ const initialState = {
 };
 
 // create async thunk functions
-const fetchRelatedPosts = createAsyncThunk("relatedPosts/fetchPost", async(postState) => {
-    const keyWords = postState.post.title;
-    console.log(keyWords);
-    console.log("Hello");
+const fetchRelatedPosts = createAsyncThunk("relatedPosts/fetchPost", async(postData) => {
+    const keyWords = postData.payload.title.split(" "); 
+    let queryString = "https://jsonplaceholder.typicode.com/posts?";
 
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    for (let i = 0; i < keyWords.length; i++) {
+        queryString+= `title_like=${keyWords[i]}`;
+
+        if (i === keyWords.length - 1) {
+            break;
+        };
+        queryString+= "&";
+    };
+
+    const response = await fetch(queryString);
     const posts = response.json();
     return posts;
 });
